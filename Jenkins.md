@@ -20,4 +20,27 @@ Edit /lib/systemd/system/jenkins.service file and change Jenkins port to 8090 by
 
 Once done start Jenkins service.
 
-sudo systemctl start jenkins
+`sudo systemctl start jenkins`
+
+you can find initial admin password under
+
+/var/lib/jenkins/secrets/initialAdminPassword
+
+## SSH키 등록하기
+/home/user/.ssh 다이렉토리에서 ssh key 확인 젠킨스 ui에 paste
+vps나 aws ec2이면 프라이빗키 입력
+
+ssh socket 찾기
+
+`curl -Lv http://localhost:8085/login 2>&1 | grep -i 'x-ssh-endpoint`
+
+Jenkins SSH server connection
+
+`mike@jenkins-server:~$ ssh -i /home/mike/.ssh/jenkins_key -l mike -p 8022 jenkins-server help`
+
+-i flag is used to point to mike's private SSH key. Remember, we have already added the public key in the Jenkins configuration.
+-l is the login user which in our example is mike
+-p is the port which we found out in the previous step to be 8022
+
+Cli command lists :
+https://www.jenkins.io/doc/book/managing/cli/
