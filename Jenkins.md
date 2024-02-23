@@ -58,6 +58,8 @@ backup directory를 설정할때 policy에 따른 chmod를 설정해줘야 한�
 
 ## Jenkinsfiles
 pipeline을 효율적으로 제어하기 위한 파일
+Jekinsfiles 구조는
+Build Agent -> Stages -> Steps로 구성
 
 ## ETC
 Cli command lists :
