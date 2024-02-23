@@ -42,5 +42,23 @@ Jenkins SSH server connection
 -l is the login user which in our example is mike
 -p is the port which we found out in the previous step to be 8022
 
+## Jenkins restart
+`sudo systemctl restart jenkins`
+
+## Jenkins backup
+
+primary files to back up : $JENKINS_HOME 와 jobs
+
+이 JENKINS_HOME에는 configurations files
+jobs폴더에는 ci, cd등의 pipeline 파일들이 있다.
+
+추천하는 backup plugins 은 thinbackup
+thinbackup에서는 backup directory를 설정해 주어야 한다.
+backup directory를 설정할때 policy에 따른 chmod를 설정해줘야 한다.
+
+## Jenkinsfiles
+pipeline을 효율적으로 제어하기 위한 파일
+
+## ETC
 Cli command lists :
 https://www.jenkins.io/doc/book/managing/cli/
