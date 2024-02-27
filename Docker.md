@@ -30,6 +30,9 @@ ex. docker run -p 80:5000 mysql
 
 `docker run -v (host directory):(docker portnumber) (app)`
 
+`docker run -e (variable name) = (variable value)`
+
+ex. docker run -e APP_COLOR=blue
 
 `docker pull`
 
@@ -57,3 +60,5 @@ attach : attach는 실행되고 있는 container에 접속할 때 사용합니�
 ex. FROM Ubuntu
 	RUN apt-get update
 	ENTRYPOINT FLASK_APP=/opt/source-code/app.py
+
+### Environmetn Variables
