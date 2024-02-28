@@ -61,6 +61,29 @@ pipeline을 효율적으로 제어하기 위한 파일
 Jekinsfiles 구조는
 Build Agent -> Stages -> Steps로 구성
 
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+
 ## ETC
 Cli command lists :
 https://www.jenkins.io/doc/book/managing/cli/
