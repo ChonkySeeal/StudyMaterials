@@ -46,7 +46,7 @@ ex. docker run -e APP_COLOR=blue
 
 `docker build`
 
-### docker exec vs docker attach vs docker run -i
+## docker exec vs docker attach vs docker run -i
 
 run -it : 새로운 컨테이너를 생성해 실행하는 명령어
 
@@ -54,11 +54,14 @@ exec : container에서 새로운 프로세스를 실행시킬 때 사용한다
 
 attach : attach는 실행되고 있는 container에 접속할 때 사용합니다.
 
-### Dockerfile
+## Dockerfile
 1. OS 로 시작
 2. (Instruction) (Argument) 구조 이는 layer라고 불린다.
 ex. FROM Ubuntu
 	RUN apt-get update
 	ENTRYPOINT FLASK_APP=/opt/source-code/app.py
 
-### Environmetn Variables
+## Entrypoint VS COMMAND
+Entrypoint : docker run 명령을 통해 컨테이너를 실행할 때 추가 인자로 덮어쓸 수 없음.
+CMD : docker run 명령을 실행할 때 컨테이너 실행과 관련된 추가 인자를 제공하면, 해당 인자가 CMD로 지정한 명령어를 덮어쓴다
+
