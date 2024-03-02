@@ -45,6 +45,7 @@ ex. docker run -e APP_COLOR=blue
 `docker logs (app name)`
 
 `docker build`
+`docker -H [tcp://<IP 주소 또는 도메인>:<포트 번호>] [unix:///<소켓 경로>] [fd://* 또는 fd://socketfd]`
 
 ## docker exec vs docker attach vs docker run -i
 
